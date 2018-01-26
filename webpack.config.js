@@ -76,7 +76,7 @@ module.exports = {
             name: 'images/[hash]-[name].[ext]'
           }
         }
-      }     
+      }
     ]
   },
 
@@ -86,7 +86,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Activity Tracker',
+      title: 'Sit-Stand-Switch',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]

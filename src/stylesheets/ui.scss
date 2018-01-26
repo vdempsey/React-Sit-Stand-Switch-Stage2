@@ -14,8 +14,9 @@ h1, label {
   margin: 0
 }
 
-h1 {
-  font-family: 'Fjalla One', sans-serif;
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 p {
@@ -137,12 +138,19 @@ p {
 }
 
 .banner-two-container {
-      width: 100%;
-      text-align: center;
-      background-color: $dark-grey;
-      height: 220px;
-      padding-top: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  width: 100%;
+  text-align: center;
+  background-color: $dark-grey;
+  height: 220px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form-container {
+  display: flex;
+  width: 800px;
+  background-color: yellow;
+  margin: 20px auto;
+}

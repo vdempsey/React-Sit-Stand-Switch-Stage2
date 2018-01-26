@@ -7,6 +7,7 @@ import Why from './Why';
 import Contact from './Contact';
 import Error404 from './Error404';
 import Register from './Register';
+import UserProfilePage from './UserProfilePage';
 import { Router, Route, hashHistory } from 'react-router';
 import { Link } from 'react-router';
 import '../stylesheets/ui.scss';
@@ -24,6 +25,7 @@ function App() {
         <Route path='/Contact' component={Contact} />
         <Route path='/TestimonialList' component={TestimonialList} />
         <Route path='/Register' component={Register} />
+        <Route path='/UserProfilePage' component={UserProfilePage} />
         <Route component={Error404} />
       </Router>
     </div>
