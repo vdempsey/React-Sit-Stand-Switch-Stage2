@@ -1,5 +1,6 @@
 import React from 'react';
 import BannerTwo from './BannerTwo';
+import Menu from './Menu';
 import { Link } from 'react-router';
 
 
@@ -7,6 +8,7 @@ function Contact(){
   return (
     <div>
       <BannerTwo bannerText='Activate your 8 to 5' />
+      <Menu />
       <div>
         <h2>Future Headline goes here</h2>
         <p>

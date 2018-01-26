@@ -7,14 +7,14 @@ import { Link } from 'react-router';
 
 function Header(){
   return (
-    <div>
-      <div>
+    <div className="header-container">
+      <div className="content-container">
         <div>
           <Link to='/'>HOME</Link>
           <Link to='/Register'>BLOG</Link>
           <Link to='/Contact'>CONTACT</Link>
         </div>
-        <div>
+        <div className="top-right-container">
           <Link to='/'><LogIn /></Link>
           <div>
             <Link to='/Register'><button>Register</button></Link>

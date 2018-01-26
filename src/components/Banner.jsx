@@ -3,9 +3,9 @@ import banner from '../assets/images/index-logo.gif';
 
 function Banner(props){
   return(
-    <div>
-      <img src={banner} />
-      <p>{props.bannerText}</p>
+    <div className="banner-container">
+      <img src={banner} className="animated-gif"/>
+      <p className="main-tagline">{props.bannerText}</p>
     </div>
   );
 }

@@ -6,10 +6,12 @@ import Menu from './Menu';
 
 function SplashPage(){
   return (
-    <div>
+    <div className="main-container">
       <Banner bannerText='Activate your 8 to 5' />
       <Menu />
-      <TestimonialList />
+      <div className="splash-content-container">
+        <TestimonialList />
+      </div>
     </div>
   );
 }

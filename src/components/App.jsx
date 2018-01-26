@@ -7,6 +7,7 @@ import Error404 from './Error404';
 import Register from './Register';
 import { Router, Route, hashHistory } from 'react-router';
 import '../stylesheets/ui.scss';
+import '../stylesheets/index.scss';
 
 
 
