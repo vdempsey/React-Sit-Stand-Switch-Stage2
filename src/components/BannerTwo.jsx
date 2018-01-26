@@ -5,13 +5,13 @@ import logoType from '../assets/images/logotype.png';
 function BannerTwo(props){
   return(
     <div>
-      <div>
+      <div className="banner-two-container">
         <div>
-          <img src={logoSm} />
+          <img className="logoSm" src={logoSm} />
         </div>
         <div>
-          <img src={logoType} />
-          <p>{props.bannerText}</p>
+          <img className="logoType" src={logoType} />
+          <p className="tagline">{props.bannerText}</p>
         </div>
       </div>
     </div>

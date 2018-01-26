@@ -97,7 +97,8 @@ p {
   background-color: #f2f2f2;
   color: #404040;
   &.active {
-  background-color: red;
+  color: #fff;
+  background-color: #0090AA;
   }
 }
 
@@ -114,3 +115,34 @@ p {
   font-weight: 300;
   font-size: 25px;
 }
+
+.logoSm {
+  padding-top: 20px;
+  width: 120px;
+  margin-right: 20px;
+}
+
+.logoType {
+  width: 300px;
+  padding-top: 20px;
+}
+
+.tagline {
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: -5px;
+}
+
+.banner-two-container {
+      width: 100%;
+      text-align: center;
+      background-color: $dark-grey;
+      height: 220px;
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
