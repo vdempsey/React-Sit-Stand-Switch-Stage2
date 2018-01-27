@@ -1,5 +1,5 @@
 import React from 'react';
-import RegisterFormA from './RegisterFormA';
+import UserProfileData from './UserProfileData';
 
 class UserProfilePage extends React.Component{
 
@@ -24,7 +24,7 @@ class UserProfilePage extends React.Component{
 render() {
   return(
     <div>
-      <RegisterFormA onNewUser={this.addUser}/>
+      <UserProfileData url={this.url}/>
     </div>
   );
 }

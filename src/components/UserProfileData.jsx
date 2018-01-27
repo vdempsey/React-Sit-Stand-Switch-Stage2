@@ -3,26 +3,26 @@ import PropTypes from 'prop-types';
 
 function UserProfileData({url, name, username, password, motto}) {
   return (
-    <tr>
-      <td>
+    <div>
+      <div>
         {url}
-      </td>
-      <td>
+      </div>
+      <div>
         {name}
-      </td>
-      <td>
+      </div>
+      <div>
         {username}
-      </td>
-      <td>
+      </div>
+      <div>
         {password}
-      </td>
-      <td>
+      </div>
+      <div>
         {password}
-      </td>
-      <td>
+      </div>
+      <div>
         {motto}
-      </td>
-    </tr>
+      </div>
+    </div>
   );
 }
 

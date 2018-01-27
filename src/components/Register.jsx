@@ -11,7 +11,7 @@ function Register(){
       <Header/>
       <BannerTwo bannerText='Activate your 8 to 5' />
       <Menu />
-      <RegisterForm />
+      <RegisterFormA />
     </div>
   );
 }
