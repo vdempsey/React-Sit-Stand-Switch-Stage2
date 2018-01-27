@@ -1,8 +1,6 @@
-# Skiing Activity Counter
-_React practice_
+# Sit-Stand-Switch
+_Epicodus capstone project (stage 2)_
 
-### Description
-Recreate Skiing Activity Counter following lynda.com tutorial
 
 
 ##### Clone project directions:
