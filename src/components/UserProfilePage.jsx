@@ -1,11 +1,33 @@
 import React from 'react';
+import RegisterFormA from './RegisterFormA';
 
-function UserProfilePage(){
+class UserProfilePage extends React.Component{
+
+  constructor(props) {
+    super(props);
+      this.state = {
+        defaultUser: {
+          url: 'new url',
+          name: 'some name',
+          username: 'test',
+          password: 'test',
+          motto: 'test'
+        }
+      };
+      this.addUser = this.addUser.bind(this);
+    }
+
+  addUser(newUser) {
+    this.setState({defaultUser: newUser});
+  }
+
+render() {
   return(
     <div>
-      <h1>Input from the registation form goes here</h1>
+      <RegisterFormA onNewUser={this.addUser}/>
     </div>
   );
+}
 }
 
 export default UserProfilePage;
