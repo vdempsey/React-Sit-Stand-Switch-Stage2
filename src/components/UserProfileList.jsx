@@ -7,15 +7,15 @@ function UserProfileList(props) {
 
   return (
     <div>
-       {props.userProfileList.map((user) =>
-         <UserProfileData url={user.url}
-           name={user.name}
-           username={user.username}
-           password={user.password}
-           motto={user.motto}
-           key={user.id}/>
-       )}
-     </div>
+      {props.userProfileList.map((user) =>
+        <UserProfileData url={user.url}
+          name={user.name}
+          username={user.username}
+          password={user.password}
+          motto={user.motto}
+          key={user.id}/>
+      )}
+    </div>
   );
 }
 

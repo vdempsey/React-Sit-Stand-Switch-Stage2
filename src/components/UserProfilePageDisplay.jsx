@@ -6,11 +6,11 @@ class UserProfilePageDisplay extends React.Component{
 
   constructor(props) {
     super(props);
-      this.state = {
-        masterUserList: []
-      };
-      this.handleAddingNewUserToList = this.handleAddingNewUserToList.bind(this);
-    }
+    this.state = {
+      masterUserList: []
+    };
+    this.handleAddingNewUserToList = this.handleAddingNewUserToList.bind(this);
+  }
 
   handleAddingNewUserToList(newUser) {
     let newMasterUserList = this.state.masterUserList.slice();
@@ -18,13 +18,13 @@ class UserProfilePageDisplay extends React.Component{
     this.setState({masterUserList: newMasterUserList});
   }
 
-render() {
-  return(
-    <div>
-      <TBD/>
-    </div>
-  );
-}
+  render() {
+    return(
+      <div>
+        TBD
+      </div>
+    );
+  }
 }
 
-export default UserProfilePage;
+export default UserProfilePageDisplay;

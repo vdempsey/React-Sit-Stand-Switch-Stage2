@@ -13,12 +13,12 @@ function RegisterFormA(props){
 
   function handleRegisterFormSubmission(event) {
     event.preventDefault();
-    props.onNewUserCreation({url: _url.value, name: _name.value, password: _password.value, motto: _motto.value, id: v4());
-      _url.value = '';
-      _name.value = '';
-      _username.value = '';
-      _password.value = '';
-      _motto.value = '';
+    props.onNewUserCreation({url: _url.value, name: _name.value, password: _password.value, motto: _motto.value, id: v4()});
+    _url.value = '';
+    _name.value = '';
+    _username.value = '';
+    _password.value = '';
+    _motto.value = '';
   }
 
 
