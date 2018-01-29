@@ -24,7 +24,7 @@ class UserProfilePage extends React.Component{
   render() {
     return(
       <div>
-        <UserProfileData url={this.url}/>
+        <UserProfileData />
       </div>
     );
   }

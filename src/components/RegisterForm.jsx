@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { v4 } from 'uuid';
 
-function RegisterFormA(props){
+function RegisterForm(props){
   let _url = null;
   let _name = null;
   let _username = null;
@@ -13,7 +13,7 @@ function RegisterFormA(props){
 
   function handleRegisterFormSubmission(event) {
     event.preventDefault();
-    props.onNewUserCreation({url: _url.value, name: _name.value, password: _password.value, motto: _motto.value, id: v4()});
+    props.onNewUserCreation({url: _url.value, name: _name.value, username: _username.value, password: _password.value, motto: _motto.value, id: v4()});
     _url.value = '';
     _name.value = '';
     _username.value = '';
@@ -57,8 +57,8 @@ function RegisterFormA(props){
 
 
 
-RegisterFormA.propTypes = {
+RegisterForm.propTypes = {
   onNewUserCreation: PropTypes.func
 };
 
-export default RegisterFormA;
+export default RegisterForm;

@@ -1,8 +1,13 @@
 import React from 'react';
 import BannerTwo from './BannerTwo';
-import RegisterFormA from './RegisterFormA';
+import RegisterForm from './RegisterForm';
 import Header from './Header';
 import Menu from './Menu';
+import NewRegisterForm from './NewRegisterForm';
+import NewUserControl from './NewUserControl';
+import UserProfileData from './UserProfileData';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 
 
@@ -12,7 +17,7 @@ function Register(){
       <Header/>
       <BannerTwo bannerText='Activate your 8 to 5' />
       <Menu />
-      <RegisterFormA />
+      <NewRegisterForm onClick={this.handleChange}/>
     </div>
   );
 }
