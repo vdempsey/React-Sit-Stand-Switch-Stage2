@@ -1,6 +1,9 @@
 import React from 'react';
 import add from '../assets/images/add.png';
 import PropTypes from 'prop-types';
+import Header from './Header';
+import Menu from './Menu';
+import BannerTwo from './BannerTwo';
 import { Link } from 'react-router';
 import { v4 } from 'uuid';
 
@@ -10,14 +13,12 @@ function RegisterForm(props){
   let _username = null;
   let _password = null;
   let _motto = null;
-  let callback = props.callback;
 
   function handleRegisterFormSubmission(event) {
     event.preventDefault();
-    callback('Test2');
     console.log('Hello');
     console.log(_name.value);
-    props.callback(_name.value);
+    props.onNewUserCreation({name: _name.value, username: _username.value, password: _password.value, motto: _motto.value, id: v4()});
     _url.value = '';
     _name.value = '';
     _username.value = '';
@@ -27,6 +28,10 @@ function RegisterForm(props){
 
 
   return (
+    <div>
+    <Header/>
+    <BannerTwo bannerText='Activate your 8 to 5' />
+    <Menu />
     <div className="register-form-container">
       <div>
         <img className="logoSm" src={add} />
@@ -56,6 +61,7 @@ function RegisterForm(props){
         <button type='submit'>REGISTER</button>
       </form>
     </div>
+  </div>
   );
 }
 

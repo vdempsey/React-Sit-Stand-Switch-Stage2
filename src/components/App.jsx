@@ -7,6 +7,7 @@ import Why from './Why';
 import Contact from './Contact';
 import Error404 from './Error404';
 import Register from './Register';
+import RegisterForm from './RegisterForm';
 import UserProfilePage from './UserProfilePage';
 import UserProfileData from './UserProfileData';
 import { Router, Route, hashHistory } from 'react-router';
@@ -25,10 +26,10 @@ class App extends React.Component {
         name: 'test'
       }
     };
-    this.onNewUserCreation = this.onNewUserCreation.bind(this);
+    this.handleNewUserFormSubmission = this.handleNewUserFormSubmission.bind(this);
   }
 
-  onNewUserCreation(newName) {
+  handleNewUserFormSubmission(newName) {
     console.log(newName);
     this.setState({userInfo: {name: newName}});
   }
@@ -44,9 +45,9 @@ class App extends React.Component {
           <Route path='/Contact' component={Contact} />
           <Route path='/TestimonialList' component={TestimonialList} />
           <Route path='/Register' component={() => (
-            <Register callback={this.onNewUserCreation}/> )} />
-          <Route path='/UserProfilePage'
-            component={UserProfilePage} />
+            <RegisterForm onNewUserCreation={this.handleNewUserFormSubmission}/> )} />
+          <Route path='/UserProfilePage' component={() => (
+            <UserProfilePage name={this.state.name}/> )} />
           <Route component={Error404} />
         </Router>
       </div>
