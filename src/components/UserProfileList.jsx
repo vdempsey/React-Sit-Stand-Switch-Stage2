@@ -9,7 +9,7 @@ function UserProfileList(props) {
     <div>
       {props.userProfileList.map((user) =>
         <UserProfileData
-          name={user.name}
+          login={user.login}
           key={user.id}/>
       )}
     </div>
