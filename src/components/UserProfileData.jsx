@@ -6,7 +6,7 @@ function UserProfileData(props) {
   console.log(props);
   return (
     <div>
-      <div>{props.name}</div>
+      <div>My name is {props.name}</div>
     </div>
   );
 }

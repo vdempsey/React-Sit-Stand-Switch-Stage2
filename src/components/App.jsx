@@ -21,15 +21,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userProfileData: {
         name: 'test'
-      }
     };
-    this.handleRegisterFormSubmission = this.handleRegisterFormSubmission.bind(this)
+    this.onNewUserCreation = this.onNewUserCreation.bind(this);
   }
 
-handleRegisterFormSubmission() {
-  this.setState = (this.state.userProfileData)
+onNewUserCreation({name}) {
+    this.setState = ({name: _name.value});
 }
 
 
@@ -43,12 +41,11 @@ render() {
         <Route path='/Contact' component={Contact} />
         <Route path='/TestimonialList' component={TestimonialList} />
         <Route path='/Register' component={Register} />
-        <Route path='/UserProfilePage' component={UserProfilePage} />
-        <Route path='/UserProfileData'
+        <Route path='/UserProfilePage'
           component={() => (
             <UserProfilePage
-              userProfileData={
-                this.props.handleRegisterFormSubmission
+              name={
+                this.props.onNewUserCreation
               }/>
           )}/>
         <Route component={Error404} />
