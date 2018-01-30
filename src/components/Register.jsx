@@ -9,13 +9,13 @@ import { Link } from 'react-router';
 
 
 
-function Register(){
+function Register(props){
   return (
     <div>
       <Header/>
       <BannerTwo bannerText='Activate your 8 to 5' />
       <Menu />
-      <RegisterForm />
+      <RegisterForm callback={props.callback}/>
     </div>
   );
 }

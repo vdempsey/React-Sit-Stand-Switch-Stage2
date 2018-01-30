@@ -21,38 +21,37 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      userInfo: {
         name: 'test'
+      }
     };
     this.onNewUserCreation = this.onNewUserCreation.bind(this);
   }
 
-onNewUserCreation({name}) {
-    this.setState = ({name: _name.value});
-}
+  onNewUserCreation(newName) {
+    console.log(newName);
+    this.setState({userInfo: {name: newName}});
+  }
 
 
-render() {
-  return(
-    <div>
-      <Router history={hashHistory}>
-        <Route exact path='/' component={SplashPage} />
-        <Route path='/How' component={How} />
-        <Route path='/Why' component={Why} />
-        <Route path='/Contact' component={Contact} />
-        <Route path='/TestimonialList' component={TestimonialList} />
-        <Route path='/Register' component={Register} />
-        <Route path='/UserProfilePage'
-          component={() => (
-            <UserProfilePage
-              name={
-                this.props.onNewUserCreation
-              }/>
-          )}/>
-        <Route component={Error404} />
-      </Router>
-    </div>
-  );
-}
+  render() {
+    return(
+      <div>
+        <Router history={hashHistory}>
+          <Route exact path='/' component={SplashPage} />
+          <Route path='/How' component={How} />
+          <Route path='/Why' component={Why} />
+          <Route path='/Contact' component={Contact} />
+          <Route path='/TestimonialList' component={TestimonialList} />
+          <Route path='/Register' component={() => (
+            <Register callback={this.onNewUserCreation}/> )} />
+          <Route path='/UserProfilePage'
+            component={UserProfilePage} />
+          <Route component={Error404} />
+        </Router>
+      </div>
+    );
+  }
 }
 
 

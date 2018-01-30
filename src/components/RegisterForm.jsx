@@ -10,12 +10,14 @@ function RegisterForm(props){
   let _username = null;
   let _password = null;
   let _motto = null;
+  let callback = props.callback;
 
   function handleRegisterFormSubmission(event) {
     event.preventDefault();
+    callback('Test2');
     console.log('Hello');
     console.log(_name.value);
-    props.onNewUserCreation({url: _url.value, name: _name.value, username: _username.value, password: _password.value, motto: _motto.value, id: v4()});
+    props.callback(_name.value);
     _url.value = '';
     _name.value = '';
     _username.value = '';
